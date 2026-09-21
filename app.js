@@ -99,6 +99,61 @@
         caption: 'Tökéletes, fényezés nélküli helyreállítás, az autó visszanyerte gyári állapotát.',
       },
     },
+    {
+      title: 'Tetőlap horpadásainak eltávolítása',
+      before: {
+        src: 'assets/gallery/new-01-before.jpg',
+        caption: 'A tető felületén több horpadás is jól látszik a diagnosztikai fény megtört vonalain.',
+      },
+      after: {
+        src: 'assets/gallery/new-01-after.jpg',
+        caption: 'A javítás után a fénycsík törésmentesen, egyenletesen fut végig a tetőn.',
+      },
+    },
+    {
+      title: 'Sárvédő horpadásának javítása',
+      before: {
+        src: 'assets/gallery/new-02-before.jpg',
+        caption: 'Jól látható horpadás a sárvédő élén, közvetlenül a kerékjárat felett.',
+      },
+      after: {
+        src: 'assets/gallery/new-02-after.jpg',
+        caption: 'A javítás után a felület nyom nélkül, gyári fényben pompázik.',
+      },
+    },
+    {
+      title: 'Hátsó sárvédő horpadásának javítása',
+      before: {
+        src: 'assets/gallery/new-03-before.jpg',
+        caption: 'Horpadás a hátsó sárvédőn, közvetlenül a lámpa mellett.',
+      },
+      after: {
+        src: 'assets/gallery/new-03-after.jpg',
+        caption: 'A javítás után a fénymintázat törés nélkül, egyenletesen fut a karosszérián.',
+      },
+    },
+    {
+      title: 'Oldalajtó horpadásának javítása',
+      before: {
+        src: 'assets/gallery/new-04-before.jpg',
+        caption: 'Horpadás az oldalajtó felső részén, a tükör közelében.',
+      },
+      after: {
+        src: 'assets/gallery/new-04-after.jpg',
+        caption: 'A javítás után a panel újra sima, a fényvonal egyenesen fut végig rajta.',
+      },
+    },
+    {
+      title: 'Nagyfelületű hátsó sárvédő javítása',
+      before: {
+        src: 'assets/gallery/new-05-before.jpg',
+        caption: 'Kiterjedt horpadás a hátsó sárvédő felületén.',
+      },
+      after: {
+        src: 'assets/gallery/new-05-after.jpg',
+        caption: 'A végeredmény: sima, horpadásmentes felület, tökéletes fényvisszaverődéssel.',
+      },
+    },
   ];
 
   const galleryDialog = document.getElementById('gallery-dialog');
