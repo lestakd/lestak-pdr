@@ -396,13 +396,16 @@
 
   <!-- Gallery pair dialog (single reusable dialog, content swapped by JS for next/prev) -->
   <dialog id="gallery-dialog" class="lightbox" aria-label="Galéria kép páros">
+    <!-- Nav buttons live outside .lightbox-inner (which clips with overflow-hidden for the
+         rounded corners) so they aren't cropped by that edge; positioned relative to the
+         dialog itself, which stays overflow: visible. -->
+    <button type="button" id="gallery-prev" data-gallery-nav="prev" aria-label="Előző pár" class="lightbox-nav lightbox-nav-prev">
+      <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
+    </button>
+    <button type="button" id="gallery-next" data-gallery-nav="next" aria-label="Következő pár" class="lightbox-nav lightbox-nav-next">
+      <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+    </button>
     <div class="lightbox-inner bg-background/98 backdrop-blur-2xl rounded-3xl shadow-2xl overflow-hidden relative">
-      <button type="button" id="gallery-prev" data-gallery-nav="prev" aria-label="Előző pár" class="lightbox-nav lightbox-nav-prev">
-        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
-      </button>
-      <button type="button" id="gallery-next" data-gallery-nav="next" aria-label="Következő pár" class="lightbox-nav lightbox-nav-next">
-        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
-      </button>
 
       <div class="p-6 md:p-8 pb-4 flex items-start justify-between gap-4">
         <div>
