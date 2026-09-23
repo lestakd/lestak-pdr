@@ -24,6 +24,7 @@
     menu.classList.toggle('translate-x-0', open);
     iconOpen.classList.toggle('hidden', open);
     iconClose.classList.toggle('hidden', !open);
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
   };
   toggle.addEventListener('click', () => setOpen(!isOpen));
   menu.querySelectorAll('a').forEach((a) => a.addEventListener('click', () => setOpen(false)));
@@ -36,66 +37,66 @@
     {
       title: 'Gyári állapot visszaállítása.',
       before: {
-        src: 'https://firebasestorage.googleapis.com/v0/b/blink-451505.firebasestorage.app/o/user-uploads%2FLQkYTrRmvvhYisZbqnz83GIuhVg1%2FA1__b32ca554.jpg?alt=media&token=df9de0b8-9822-444b-8080-fadc4e4327db',
+        src: 'assets/gallery/gallery-01-before.jpg',
         caption: 'A sérülés eredeti állapota - mély horpadás az élen.',
       },
       after: {
-        src: 'https://firebasestorage.googleapis.com/v0/b/blink-451505.firebasestorage.app/o/user-uploads%2FLQkYTrRmvvhYisZbqnz83GIuhVg1%2FA2__b236c58d.jpg?alt=media&token=a6a3896b-cd45-44ae-b6c7-43efef3dd25c',
+        src: 'assets/gallery/gallery-01-after.jpg',
         caption: 'A végleges eredmény - tökéletesen sima felület fényezés nélkül.',
       },
     },
     {
       title: 'Komplex jégkár javítás',
       before: {
-        src: 'https://firebasestorage.googleapis.com/v0/b/blink-451505.firebasestorage.app/o/user-uploads%2FLQkYTrRmvvhYisZbqnz83GIuhVg1%2FB1__9d6066eb.jpg?alt=media&token=5b6a8855-71c6-4923-8035-4f6cf4bf12de',
+        src: 'assets/gallery/gallery-02-before.jpg',
         caption: 'Számos kisebb horpadás a motorháztetőn a jégkár után.',
       },
       after: {
-        src: 'https://firebasestorage.googleapis.com/v0/b/blink-451505.firebasestorage.app/o/user-uploads%2FLQkYTrRmvvhYisZbqnz83GIuhVg1%2FB2__f9432b07.jpg?alt=media&token=64a38539-901c-49c7-a37c-e2c25649cd5f',
+        src: 'assets/gallery/gallery-02-after.jpg',
         caption: 'Minden horpadás nyom nélkül eltávolítva, gyári fény megmaradt.',
       },
     },
     {
       title: 'Élmenti horpadás helyreállítása',
       before: {
-        src: 'https://firebasestorage.googleapis.com/v0/b/blink-451505.firebasestorage.app/o/user-uploads%2FLQkYTrRmvvhYisZbqnz83GIuhVg1%2FC1__6de04a7d.jpg?alt=media&token=aae48aed-1017-47ec-98c6-2b5419f963b8',
+        src: 'assets/gallery/gallery-03-before.jpg',
         caption: 'Mély horpadások sárvédő íven, ami nagy odafigyelést igényel.',
       },
       after: {
-        src: 'https://firebasestorage.googleapis.com/v0/b/blink-451505.firebasestorage.app/o/user-uploads%2FLQkYTrRmvvhYisZbqnz83GIuhVg1%2FC2__164fd358.jpg?alt=media&token=6538b272-3f55-4097-a3ad-d3a1759344fd',
+        src: 'assets/gallery/gallery-03-after.jpg',
         caption: 'A javítás után a felület újra tökéletesen sima, fényezés nélkül.',
       },
     },
     {
       title: 'Motorháztető precíziós javítása',
       before: {
-        src: 'https://firebasestorage.googleapis.com/v0/b/blink-451505.firebasestorage.app/o/user-uploads%2FLQkYTrRmvvhYisZbqnz83GIuhVg1%2FG1__7564c641.jpg?alt=media&token=8a930cee-dd47-4194-9068-ef6bafe3d85b',
+        src: 'assets/gallery/gallery-04-before.jpg',
         caption: 'Nagyméretű horpadás a motorháztetőn, töréssel az él mentén.',
       },
       after: {
-        src: 'https://firebasestorage.googleapis.com/v0/b/blink-451505.firebasestorage.app/o/user-uploads%2FLQkYTrRmvvhYisZbqnz83GIuhVg1%2FG2__89072b15.jpg?alt=media&token=73a321f2-db84-4202-9fe9-c359603c2ca9',
+        src: 'assets/gallery/gallery-04-after.jpg',
         caption: 'Látványos végeredmény - a motorháztető visszanyerte eredeti formáját.',
       },
     },
     {
       title: 'Oldalpanel precíziós javítása',
       before: {
-        src: 'https://firebasestorage.googleapis.com/v0/b/blink-451505.firebasestorage.app/o/user-uploads%2FLQkYTrRmvvhYisZbqnz83GIuhVg1%2FH1__58617fa3.jpg?alt=media&token=cb2ad8c4-0740-48d5-9332-41097507ee48',
+        src: 'assets/gallery/gallery-05-before.jpg',
         caption: 'Mély, éles horpadás az oldalpanelen, ami speciális PDR technikát igényelt.',
       },
       after: {
-        src: 'https://firebasestorage.googleapis.com/v0/b/blink-451505.firebasestorage.app/o/user-uploads%2FLQkYTrRmvvhYisZbqnz83GIuhVg1%2FH2__9d3698b1.jpg?alt=media&token=9684d44f-342a-4701-b68a-270ff80ae7a3',
+        src: 'assets/gallery/gallery-05-after.jpg',
         caption: 'A javítás után a felület újra tökéletes, mintha sosem történt volna sérülés.',
       },
     },
     {
       title: 'Nagyfelületű oldalpanel javítás',
       before: {
-        src: 'https://firebasestorage.googleapis.com/v0/b/blink-451505.firebasestorage.app/o/user-uploads%2FLQkYTrRmvvhYisZbqnz83GIuhVg1%2FN1__945506ce.jpg?alt=media&token=ae5a3b98-b9af-4dfe-8980-f7e23befc8a1',
+        src: 'assets/gallery/gallery-06-before.jpg',
         caption: 'Kiterjedt, nagyméretű horpadás Mercedes V-Class oldalpanelén.',
       },
       after: {
-        src: 'https://firebasestorage.googleapis.com/v0/b/blink-451505.firebasestorage.app/o/user-uploads%2FLQkYTrRmvvhYisZbqnz83GIuhVg1%2FN2__6734d415.jpg?alt=media&token=e430393a-5be8-41fc-859c-698b16950410',
+        src: 'assets/gallery/gallery-06-after.jpg',
         caption: 'Tökéletes, fényezés nélküli helyreállítás, az autó visszanyerte gyári állapotát.',
       },
     },
