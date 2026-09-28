@@ -49,7 +49,7 @@
       title: 'Komplex jégkár javítás',
       before: {
         src: 'assets/gallery/gallery-02-before.jpg',
-        caption: 'Számos kisebb horpadás a motorháztetőn a jégkár után.',
+        caption: 'Horpadás az ajtó élen.',
       },
       after: {
         src: 'assets/gallery/gallery-02-after.jpg',
@@ -79,17 +79,6 @@
       },
     },
     {
-      title: 'Oldalpanel precíziós javítása',
-      before: {
-        src: 'assets/gallery/gallery-05-before.jpg',
-        caption: 'Mély, éles horpadás az oldalpanelen, ami speciális PDR technikát igényelt.',
-      },
-      after: {
-        src: 'assets/gallery/gallery-05-after.jpg',
-        caption: 'A javítás után a felület újra tökéletes, mintha sosem történt volna sérülés.',
-      },
-    },
-    {
       title: 'Nagyfelületű oldalpanel javítás',
       before: {
         src: 'assets/gallery/gallery-06-before.jpg',
@@ -104,7 +93,7 @@
       title: 'Tetőlap horpadásainak eltávolítása',
       before: {
         src: 'assets/gallery/new-01-before.jpg',
-        caption: 'A tető felületén több horpadás is jól látszik a diagnosztikai fény megtört vonalain.',
+        caption: 'A tető felületén lévő jégkár jól látszik a diagnosztikai fény megtört vonalain.',
       },
       after: {
         src: 'assets/gallery/new-01-after.jpg',
