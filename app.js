@@ -237,3 +237,18 @@
     );
   });
 })();
+
+// Lazy images: adds .is-loaded once each loading="lazy" image has actually
+// painted (or failed), which stops the CSS shimmer placeholder defined in
+// input.css. Handles images already complete from the browser cache too.
+(function () {
+  document.querySelectorAll('img[loading="lazy"]').forEach((img) => {
+    const markLoaded = () => img.classList.add('is-loaded');
+    if (img.complete && img.naturalWidth > 0) {
+      markLoaded();
+    } else {
+      img.addEventListener('load', markLoaded, { once: true });
+      img.addEventListener('error', markLoaded, { once: true });
+    }
+  });
+})();
