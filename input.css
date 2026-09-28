@@ -1,0 +1,234 @@
+@import "tailwindcss";
+
+@theme {
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+
+  --font-sans: 'Manrope', ui-sans-serif, system-ui, sans-serif;
+  --font-heading: 'Manrope', ui-sans-serif, system-ui, sans-serif;
+}
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 222.2 84% 4.9%;
+  --card: 0 0% 100%;
+  --card-foreground: 222.2 84% 4.9%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 222.2 84% 4.9%;
+  --primary: 222 47% 11%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 210 40% 96.1%;
+  --secondary-foreground: 222.2 47.4% 11.2%;
+  --muted: 210 40% 96.1%;
+  --muted-foreground: 215.4 16.3% 46.9%;
+  --accent: 221 83% 53%;
+  --accent-foreground: 0 0% 100%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 210 40% 98%;
+  --border: 214.3 31.8% 91.4%;
+  --input: 214.3 31.8% 91.4%;
+  --ring: 221 83% 53%;
+}
+
+@layer base {
+  * {
+    border-color: hsl(var(--border));
+  }
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+  }
+  body {
+    font-family: var(--font-sans);
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    letter-spacing: -0.025em;
+  }
+}
+
+/* Unified button system — every CTA on the site uses one of these combinations
+   (base .btn + one size + one style) instead of ad-hoc one-off utility strings,
+   so buttons look and behave consistently everywhere. */
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl font-bold transition-all duration-200 whitespace-nowrap;
+  }
+  .btn-lg {
+    @apply px-10 py-7 text-lg;
+  }
+  .btn-md {
+    @apply px-8 py-6 text-base;
+  }
+  .btn-sm {
+    @apply px-6 h-10 text-sm;
+  }
+  .btn-primary {
+    @apply bg-accent text-white shadow-lg shadow-accent/20 hover:bg-accent/90;
+  }
+  .btn-outline {
+    @apply border border-primary/20 text-primary hover:bg-primary/5;
+  }
+  .btn-outline-accent {
+    @apply border border-accent text-accent hover:bg-accent hover:text-white;
+  }
+  .btn-ghost {
+    @apply border border-white/30 bg-primary/70 text-white backdrop-blur-sm hover:bg-primary/80;
+  }
+}
+
+/* Simple lightbox dialog styling (used by the gallery before/after modal).
+   Explicit position/inset/margin guarantee true viewport-centering across browsers,
+   on top of the native <dialog> default centering. Sized to fill most of the screen
+   (larger than a typical modal) while still keeping a comfortable margin around it. */
+dialog.lightbox {
+  position: fixed;
+  inset: 0;
+  margin: auto;
+  border: none;
+  padding: 0;
+  background: transparent;
+  max-width: min(80rem, 95vw);
+  max-height: 95vh;
+  width: 100%;
+  border-radius: 1.5rem;
+  overflow: visible;
+}
+dialog.lightbox::backdrop {
+  background: rgba(10, 15, 29, 0.85);
+  backdrop-filter: blur(6px);
+}
+dialog.lightbox .lightbox-inner {
+  max-height: 95vh;
+  overflow-y: auto;
+}
+
+/* Prev/next navigation for stepping between gallery pairs without closing the dialog */
+.lightbox-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.95);
+  color: hsl(var(--primary));
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s;
+}
+.lightbox-nav:hover {
+  background: white;
+  transform: translateY(-50%) scale(1.06);
+}
+.lightbox-nav-prev {
+  left: -1.25rem;
+}
+.lightbox-nav-next {
+  right: -1.25rem;
+}
+@media (max-width: 900px) {
+  .lightbox-nav {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  .lightbox-nav-prev {
+    left: 0.5rem;
+  }
+  .lightbox-nav-next {
+    right: 0.5rem;
+  }
+}
+
+/* Full-size single-photo zoom dialog */
+dialog.zoom-lightbox {
+  max-width: 96vw;
+  width: auto;
+  max-height: 96vh;
+  border-radius: 0;
+  background: transparent;
+}
+dialog.zoom-lightbox::backdrop {
+  background: rgba(5, 8, 15, 0.94);
+}
+.zoom-image {
+  display: block;
+  max-width: 96vw;
+  max-height: 90vh;
+  width: auto;
+  height: auto;
+  border-radius: 1rem;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  margin: 0 auto;
+  cursor: zoom-out;
+}
+.zoom-close {
+  position: fixed;
+  top: 1.5rem;
+  right: 1.5rem;
+  z-index: 30;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(6px);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.zoom-close:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Shimmer placeholder for lazy-loaded images: an animated gradient shows behind
+   the <img> while its file is still downloading/decoding, so scrolling to a
+   below-the-fold image (gallery, célcsoport-kártyák) reveals a soft loading
+   animation instead of a flat gray "broken image" flash. app.js adds the
+   .is-loaded class once the image has actually painted, which stops the
+   animation. */
+img[loading="lazy"] {
+  background: linear-gradient(100deg, hsl(var(--muted)) 25%, hsl(var(--border)) 50%, hsl(var(--muted)) 75%);
+  background-size: 200% 100%;
+  animation: img-shimmer 1.6s ease-in-out infinite;
+}
+img[loading="lazy"].is-loaded {
+  animation: none;
+  background: none;
+}
+@keyframes img-shimmer {
+  from {
+    background-position: 150% 0;
+  }
+  to {
+    background-position: -50% 0;
+  }
+}
