@@ -46,7 +46,7 @@
       },
     },
     {
-      title: 'Komplex jégkár javítás',
+      title: 'Ajtó élén keletkezett horpadás javítása',
       before: {
         src: 'assets/gallery/gallery-02-before.jpg',
         caption: 'Horpadás az ajtó élen.',
