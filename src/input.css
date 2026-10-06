@@ -440,3 +440,11 @@ img[loading="lazy"].is-loaded {
 @media (prefers-reduced-motion: reduce) {
   .hx-w > span { animation: none; transform: none; }
 }
+
+/* Logó (LESTÁK PDR felirat + fényvonalak). A vonalak és a "PDR" a márkakék, a többi a környezet szövegszíne. */
+.brand-logo { display: inline-flex; align-items: center; }
+.brand-logo svg { display: block; width: auto; }
+.brand-logo--nav svg { height: 52px; margin: -6px 0; }
+.brand-logo--foot svg { height: 68px; }
+.brand-logo--page svg { height: 48px; }
+.lg-b { color: hsl(var(--accent)); }
