@@ -4,10 +4,10 @@
   const onScroll = () => {
     if (window.scrollY > 20) {
       nav.classList.add('bg-background/80', 'backdrop-blur-md', 'shadow-md', 'py-3');
-      nav.classList.remove('bg-transparent', 'py-4');
+      nav.classList.remove('bg-transparent', 'py-4', 'nav-hero');
     } else {
       nav.classList.remove('bg-background/80', 'backdrop-blur-md', 'shadow-md', 'py-3');
-      nav.classList.add('bg-transparent', 'py-4');
+      nav.classList.add('bg-transparent', 'py-4', 'nav-hero');
     }
   };
   window.addEventListener('scroll', onScroll);

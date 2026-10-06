@@ -18,7 +18,8 @@
   <meta name="twitter:card" content="summary_large_image" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Archivo:wdth,wght@125,700;125,800;125,900&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="/assets/images/hero-pdr.jpg" imagesrcset="/assets/images/hero-pdr-720.jpg 720w, /assets/images/hero-pdr.jpg 1600w" imagesizes="(max-width: 900px) 100vw, 74vw" fetchpriority="high" />
   <link rel="stylesheet" href="/assets/styles.css" />
   <script type="application/ld+json">
   {
@@ -128,36 +129,31 @@
   </nav>
 
   <!-- Hero -->
-  <section class="relative min-h-screen flex items-center pt-20 pb-10 overflow-hidden">
-    <div class="absolute inset-0 z-0">
-      <img src="/assets/images/hero-pdr.jpg" srcset="/assets/images/hero-pdr-720.jpg 720w, /assets/images/hero-pdr.jpg 1440w" sizes="100vw" alt="Kerékfelfüggesztés-beállító emelőn álló autó a Lesták Horpadás és Jégkár Javító Kft. diósdi műhelyében" fetchpriority="high" width="1440" height="1080" class="w-full h-full object-cover brightness-[0.85]" />
-      <div class="absolute inset-0 bg-gradient-to-r from-background via-background/60 to-transparent"></div>
+  <section class="hx" aria-labelledby="hx-title">
+    <div class="hx-photo">
+      <img src="/assets/images/hero-pdr.jpg" srcset="/assets/images/hero-pdr-720.jpg 720w, /assets/images/hero-pdr.jpg 1600w" sizes="(max-width: 900px) 100vw, 74vw" alt="Fehér autó a Lesták Horpadás és Jégkár Javító Kft. diósdi műhelyében, horpadásjavítás közben" fetchpriority="high" width="1600" height="1200" />
     </div>
-    <div class="relative z-10 max-w-7xl mx-auto px-6 w-full">
-      <div class="max-w-2xl">
-        <span class="inline-block mb-6 bg-accent/10 text-accent border-none px-4 py-1 text-xs font-bold uppercase tracking-wider rounded-full">Autóipari PDR szolgáltatások</span>
-        <h1 class="text-4xl md:text-5xl font-bold font-heading leading-[1.1] mb-8 tracking-tighter">Jégkár- és horpadásjavítás <span class="text-accent">olyan pontossággal, hogy nyoma sem marad</span></h1>
-        <p class="text-xl text-muted-foreground mb-10 leading-relaxed">22+ év tapasztalat, 150 000+ helyreállított horpadás – magánszemélyeknek és autószervizeknek, a gyári fényezés megőrzésével.</p>
-        <div class="flex flex-col sm:flex-row gap-4">
-          <a href="tel:+36304782142" class="btn btn-lg btn-primary">
-            <svg class="mr-2 w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.36 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.34 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-            Hívjon most
-          </a>
-          <a href="#galeria" class="btn btn-lg btn-ghost">Előtte-utána képek</a>
-        </div>
-        <div class="mt-6 inline-flex items-center gap-2.5 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full border border-border/50 shadow-sm flex-nowrap whitespace-nowrap">
-          <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png" alt="Google" class="h-4 object-contain shrink-0" />
-          <div class="flex items-center gap-0.5 shrink-0">
-            <svg class="w-3.5 h-3.5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24"><polygon points="12 2 15 9 22 9.5 17 14.5 18.5 22 12 18 5.5 22 7 14.5 2 9.5 9 9"/></svg>
-            <svg class="w-3.5 h-3.5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24"><polygon points="12 2 15 9 22 9.5 17 14.5 18.5 22 12 18 5.5 22 7 14.5 2 9.5 9 9"/></svg>
-            <svg class="w-3.5 h-3.5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24"><polygon points="12 2 15 9 22 9.5 17 14.5 18.5 22 12 18 5.5 22 7 14.5 2 9.5 9 9"/></svg>
-            <svg class="w-3.5 h-3.5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24"><polygon points="12 2 15 9 22 9.5 17 14.5 18.5 22 12 18 5.5 22 7 14.5 2 9.5 9 9"/></svg>
-            <svg class="w-3.5 h-3.5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24"><polygon points="12 2 15 9 22 9.5 17 14.5 18.5 22 12 18 5.5 22 7 14.5 2 9.5 9 9"/></svg>
-          </div>
-          <span class="text-sm font-bold text-primary shrink-0">5.0/5</span>
-          <span class="text-sm text-muted-foreground shrink-0">(27+ értékelés)</span>
-        </div>
+    <div class="hx-main">
+      <h1 id="hx-title" class="hx-title" aria-label="Eltűnik a horpadás. Marad a gyári fényezés.">
+        <span class="hx-s"><span class="hx-w" style="--i:0"><span>Eltűnik</span></span> <span class="hx-w" style="--i:1"><span>a</span></span> <span class="hx-w" style="--i:2"><span>horpadás.</span></span></span>
+        <span class="hx-s"><span class="hx-w" style="--i:3"><span>Marad</span></span> <span class="hx-w" style="--i:4"><span>a</span></span> <span class="hx-w" style="--i:5"><span>gyári</span></span> <span class="hx-w" style="--i:6"><span>fényezés.</span></span></span>
+      </h1>
+      <p class="hx-lede">Fényezés nélküli horpadás- és jégkárjavítás Diósdon, Érden és Budapest környékén. Magánszemélyeknek és autószervizeknek.</p>
+      <div class="hx-ctas">
+        <a href="tel:+36304782142" class="hx-call"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span><small>Hívjon most</small><b>06 30 478 2142</b></span></a>
+        <a href="#galeria" class="hx-ghost">Előtte-utána képek</a>
       </div>
+      <a class="g-badge" href="https://www.google.com/maps/place/Lest%C3%A1k+Horpad%C3%A1s+%C3%A9s+J%C3%A9gk%C3%A1r+Jav%C3%ADt%C3%B3+Kft./@47.4012059,18.9344743,17z/data=!4m8!3m7!1s0x4741e151534f6db3:0x77e198ae1fa5737c!8m2!3d47.4012059!4d18.9344743!9m1!1b1!16s%2Fg%2F11s47rpqgw?hl=hu-HU&amp;entry=ttu" target="_blank" rel="noopener" aria-label="Google-értékelés: 5.0 az 5-ből, 27+ értékelés">
+        <img class="g-logo" src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png" width="67" height="22" alt="Google" />
+        <span class="g-stars"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15 9 22 9.5 17 14.5 18.5 22 12 18 5.5 22 7 14.5 2 9.5 9 9"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15 9 22 9.5 17 14.5 18.5 22 12 18 5.5 22 7 14.5 2 9.5 9 9"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15 9 22 9.5 17 14.5 18.5 22 12 18 5.5 22 7 14.5 2 9.5 9 9"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15 9 22 9.5 17 14.5 18.5 22 12 18 5.5 22 7 14.5 2 9.5 9 9"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15 9 22 9.5 17 14.5 18.5 22 12 18 5.5 22 7 14.5 2 9.5 9 9"/></svg></span>
+        <span class="g-score">5.0/5</span><span class="g-count">(27+ értékelés)</span>
+      </a>
+    </div>
+    <div class="hx-bar">
+      <div><b>22+ év</b>tapasztalat</div>
+      <div><b>150 000+</b>javított horpadás</div>
+      <div><b>45+</b>partner szerviz</div>
+      <div><b>Diósd, Érd</b>és Budapest környéke</div>
     </div>
   </section>
 
