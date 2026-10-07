@@ -634,6 +634,34 @@ GitHub-webfeltöltés + automatikus Netlify-újrapublikálás a munkamódszer.
     - **Visszaállítás:** lásd a visszaállítási zip útmutatóját (teljes oldal, vagy csak a hero: `index.html`,
       `assets/styles.css`, `assets/images/hero-pdr*.jpg`).
 
+31. Új logó beépítése (2026.10.06): a felhasználó a "W1" logóváltozatot választotta (3 körvonalazott jelű
+    sor: LESTÁK PDR felirat, alatta 3 fényvonal; a középső vonal sima, törésmentes ívvel behajlik, mint egy
+    horpadás a kontrollfény tükröződésében). Menet: 5 koncepció → a 3. (L-ív) és 5. (aláhúzott felirat)
+    kedvelt → 10 új változat (L1-L5, W1-W5) → W1/W2/W5 weboldal-előnézet → W1 véglegesítve.
+    - **Visszaállítási pont (a csere előtt):** git-tag `visszaallitasi-pont-logo-elott-2026-10-06`, zip:
+      `lestak-VISSZAALLITASI-PONT-LOGO-ELOTT-2026-10-06.zip`.
+    - **Logó:** a felirat körvonalakká alakítva (Manrope ExtraBold, a szöveg nem betűtípus-függő), inline SVG a
+      menüsorban, a láblécben és a két jogi oldal fejlécében. A szín `currentColor`, a "PDR" és a középső vonal
+      a márkakék (`.lg-b` osztály = `hsl(var(--accent))`, #2563EB) MINDEN háttéren; a felirat és a két szélső
+      vonal a környezet szövegszíne (a hero tetején fehér, görgetés után sötét, a láblécben fehér).
+      A méretek a `src/input.css` végén: `.brand-logo--nav` (52px, negatív margóval, a navbar magassága
+      változatlan 72px), `.brand-logo--foot` (68px), `.brand-logo--page` (48px). Az SVG ~3,9 KB / előfordulás.
+    - **Favicon:** `favicon.svg` = a W1 jel (sötét #0F172A lekerekített négyzet, 3 fehér fényvonal, a közepe
+      kék hullámmal). Az előző kék, autó-ikonos favicon kikerült.
+    - **Érintett fájlok:** `index.html`, `aszf.html`, `adatkezelesi-tajekoztato.html`, `favicon.svg`,
+      `src/input.css`, `assets/styles.css`, `README-allapot.md`. A régi autó-ikon + "LESTÁK HORPADÁS" felirat
+      a jogi oldalakról is lecserélődött.
+    - **Ellenőrzés (Playwright):** hero-tetején és görgetve is a márkakék; nincs konzolhiba; a navbar
+      magassága nem változott; mobil menü rendben; a jogi oldalak fejléce rendben.
+    - **Forrás:** a logó generátora a sandboxban volt (`gen.py`/`gen2.py`); a végleges SVG az `index.html`-ben
+      található, ez a forrás. Ha új változat kell, az SVG-ből kell kiindulni.
+
+32. "Kinek segíthetünk?" kártyák: a három képen lévő kék piktogram eltávolítva (2026.10.07.): a felhasználó
+    szerint nem relevánsak voltak a képekhez. Csak az `index.html` változott (3 db `absolute top-4 left-4 bg-accent`
+    ikon-doboz törölve), a CSS és a többi oldal érintetlen. Ellenőrzés Playwrighttal: a kártyák képei tiszták,
+    nincs konzolhiba. Visszaállítás: az ikon-dobozok a `visszaallitasi-pont-logo-elott-2026-10-06` git-tagben
+    (és a hozzá tartozó zipben) megvannak.
+
 ## Munkamódszer emlékeztető
 A felhasználó (D) nem fejlesztő. Tartalmi szöveg-módosításokhoz: (1) review Word dokumentumot küldök
 (screenshot + szöveg-táblázat), (2) ő beírja a jobb oszlopba a változtatásokat, visszaküldi, (3) átvezetem a
