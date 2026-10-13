@@ -144,6 +144,17 @@
         caption: 'A végeredmény: sima, horpadásmentes felület, tökéletes fényvisszaverődéssel.',
       },
     },
+    {
+      title: 'Tető horpadásának javítása antenna mellett',
+      before: {
+        src: 'assets/gallery/new-06-before.jpg',
+        caption: 'Horpadás a tetőn, az antenna rögzítési pontja mellett (az antennát a javításhoz leszerelték).',
+      },
+      after: {
+        src: 'assets/gallery/new-06-after.jpg',
+        caption: 'A javítás után a tető felülete sima, az antenna visszakerült a helyére.',
+      },
+    },
   ];
 
   const galleryDialog = document.getElementById('gallery-dialog');
