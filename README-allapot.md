@@ -662,6 +662,8 @@ GitHub-webfeltöltés + automatikus Netlify-újrapublikálás a munkamódszer.
     nincs konzolhiba. Visszaállítás: az ikon-dobozok a `visszaallitasi-pont-logo-elott-2026-10-06` git-tagben
     (és a hozzá tartozó zipben) megvannak.
 
+33. **PDR-magyarázat (2026-10-13)** – A „PDR" rövidítés feloldása a főoldalon: (a) a hero alcíme most „PDR – **fényezés nélküli horpadás- és jégkárjavítás** Diósdon, Érden és Budapest környékén…"; (b) a Szolgáltatások szekcióban „Mi az a PDR?" magyarázó doboz (Paintless Dent Repair = fényezés nélküli horpadásjavítás, rövid működési leírás). Érintett fájlok: `index.html`, `src/input.css` (`.hx-lede strong`, `.pdr-def*` osztályok), `assets/styles.css` (újraépítve).
+
 ## Munkamódszer emlékeztető
 A felhasználó (D) nem fejlesztő. Tartalmi szöveg-módosításokhoz: (1) review Word dokumentumot küldök
 (screenshot + szöveg-táblázat), (2) ő beírja a jobb oszlopba a változtatásokat, visszaküldi, (3) átvezetem a
