@@ -448,3 +448,10 @@ img[loading="lazy"].is-loaded {
 .brand-logo--foot svg { height: 68px; }
 .brand-logo--page svg { height: 48px; }
 .lg-b { color: hsl(var(--accent)); }
+
+/* "Mi az a PDR?" magyarázó doboz a Szolgáltatások szekcióban + a hero alcímében a PDR kiemelése */
+.hx-lede strong { color: #fff; font-weight: 800; }
+.pdr-def { margin-bottom: 2.25rem; padding: 1.25rem 1.5rem; border-radius: 1rem; background: hsl(var(--accent) / 0.06); border: 1px solid hsl(var(--accent) / 0.22); }
+.pdr-def-q { margin: 0 0 0.35rem; font-weight: 800; font-size: 0.9375rem; color: hsl(var(--accent)); }
+.pdr-def-a { margin: 0; line-height: 1.65; color: hsl(var(--foreground)); }
+.pdr-def-a strong { font-weight: 800; }
