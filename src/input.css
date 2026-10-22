@@ -461,7 +461,6 @@ img[loading="lazy"].is-loaded {
    Világos háttéren (görgetett navbar, jogi oldalak) a sötét-kék változat, sötét háttéren (hero tetején lévő navbar, lábléc) a világos változat látszik. */
 .brand-logo { display: inline-flex; align-items: center; gap: 0.7rem; text-decoration: none; color: inherit; }
 .brand-mark { display: block; width: auto; }
-.brand-mark--dark { display: none; }
 .brand-word { font-family: var(--font-heading); font-weight: 800; letter-spacing: -0.01em; line-height: 1; white-space: nowrap; }
 .brand-logo--nav .brand-mark { height: 56px; margin: -8px 0; }
 .brand-logo--nav .brand-word { font-size: 1.45rem; }
@@ -469,9 +468,8 @@ img[loading="lazy"].is-loaded {
 .brand-logo--foot .brand-word { font-size: 1.75rem; }
 .brand-logo--page .brand-mark { height: 52px; }
 .brand-logo--page .brand-word { font-size: 1.3rem; }
-#navbar.nav-hero .brand-mark--light { display: none; }
-#navbar.nav-hero .brand-mark--dark { display: block; }
-.brand-logo--foot .brand-mark--light { display: none; }
-.brand-logo--foot .brand-mark--dark { display: block; }
 #navbar.nav-hero .brand-word .lg-b { color: #7DA4FF; }
 .brand-logo--foot .brand-word .lg-b { color: #7DA4FF; }
+
+/* Eredeti (nem invertált) logó sötét háttéren is: halvány világos kontúr a láthatóságért */
+#navbar.nav-hero .brand-mark--light, .brand-logo--foot .brand-mark--light { filter: drop-shadow(0 0 1px rgba(255,255,255,.95)) drop-shadow(0 0 2px rgba(255,255,255,.7)); }
